@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <title>Logged in as {{ session.name }}</title>
+        <style>
+            input {
+                border: none;
+            }
+            p {
+                font-family: sans-serif;
+            }
+        </style>
+    {% if session.name %}
+        You are logged in as {{ session.name }}. <a href="/logout">Log out</a>.
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>.
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <title>Login</title>
+
+    <style>
+        input {
+            border: none;
+        }
+    </style>
+    <form action="/login" method="post">
+        <input style="background-color: rgb(250, 250, 250);" autocomplete="off" name="name" placeholder="Name" type="text">
+        <input type="submit" value="Log In">
+    </form>
+
+{% endblock %}
